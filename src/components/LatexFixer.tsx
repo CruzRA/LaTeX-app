@@ -159,26 +159,26 @@ const LatexFixer = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Logo */}
           <div className="flex justify-center">
-            <Image 
-              src="/scale-logo.png" 
-              alt="Scale Logo" 
-              width={120}
-              height={48}
-              className="object-contain w-auto h-12"
+            <Image
+              src="/kepler-logo.png"
+              alt="Kepler Logo"
+              width={1600}
+              height={642}
+              className="object-contain w-auto h-36"
               priority
             />
           </div>
 
           {/* Title */}
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold">LaTeX Fixer</h1>
+            <h1 className="text-4xl font-bold">Kepler RLHF LaTeX Generation Tool</h1>
             <p className="text-lg text-gray-300">
-              Paste your text requiring LaTeX and we&apos;ll add LaTeX while preserving your content exactly.
+              Write out your plain text formula like f(x) = 3(x^0.5)*5 - 7x^2 and receive a LaTeX version of it.
             </p>
           </div>
 
           {/* Input Section */}
-          <div className="bg-gray-900 rounded-lg p-6 space-y-6">
+          <div className="bg-gray-700 rounded-lg p-6 space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">
                 Input Text
@@ -186,25 +186,25 @@ const LatexFixer = () => {
               <textarea
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
-                placeholder="Enter your text requiring LaTeX..."
-                className="w-full h-32 bg-gray-800 text-white rounded-lg p-4 border-none focus:ring-2 focus:ring-purple-500 focus:outline-none resize-none font-mono"
+                placeholder="Enter your plain text to generate a LaTeX version..."
+                className="w-full h-32 bg-gray-800 text-white rounded-lg p-4 border-none focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none font-mono"
               />
             </div>
             
             <button
               onClick={fixLatex}
               disabled={loading}
-              className={`w-full bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg flex items-center justify-center transition-colors ${
+              className={`w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg flex items-center justify-center transition-colors ${
                 loading ? 'opacity-75 cursor-not-allowed' : ''
               }`}
             >
               {loading ? (
                 <span className="flex items-center gap-2">
                   <span className="animate-spin text-xl">⟳</span>
-                  Fixing LaTeX...
+                  Getting LaTeX...
                 </span>
               ) : (
-                'Fix LaTeX'
+                'Get LaTeX'
               )}
             </button>
           </div>
