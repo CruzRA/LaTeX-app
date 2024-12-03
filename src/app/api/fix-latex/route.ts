@@ -74,7 +74,6 @@ export async function POST(request: Request) {
     }
 
     const data = await openaiResponse.json();
-    console.log('Raw OpenAI response:', JSON.stringify(data, null, 2));
 
     if (!data.choices || !data.choices[0] || !data.choices[0].message || !data.choices[0].message.content) {
       console.error('Unexpected OpenAI API response format:', data);
