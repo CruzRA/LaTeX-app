@@ -164,7 +164,7 @@ const LatexFixer = () => {
               alt="Kepler Logo"
               width={1600}
               height={642}
-              className="object-contain w-auto h-36"
+              className="object-contain w-auto h-24"
               priority
             />
           </div>
