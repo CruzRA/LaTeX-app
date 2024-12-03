@@ -128,7 +128,6 @@ const LatexFixer = () => {
   const [originalSegments, correctedSegments] = result 
     ? findLatexDifferences(inputText, result.correctedText)
     : [[], []];
-  console.log(originalSegments, correctedSegments);
   return (
     <>
       {/* MathJax Script */}
