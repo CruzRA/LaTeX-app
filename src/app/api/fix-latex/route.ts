@@ -24,8 +24,8 @@ Follow these precise rules:
 
 **Example:**
 
-- **Original:** "Calculate the slope using (y2 - y1) / (x2 - x1) = (31-22)/(19-11) = 9/8."
-- **Converted:** "Calculate the slope using $\frac{y_2 - y_1}{x_2 - x_1} = \frac{31 - 22}{19 - 11} = \frac{9}{8}$."`;
+- **Original:** Calculate the slope using (y2 - y1) / (x2 - x1) = (31-22)/(19-11) = 9/8.
+- **Converted:** Calculate the slope using $\frac{y_2 - y_1}{x_2 - x_1} = \frac{31 - 22}{19 - 11} = \frac{9}{8}$.`;
 
 
 export async function POST(request: Request) {
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
         'Authorization': `Bearer ${process.env.GPT_API_KEY}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4',
+        model: 'gpt-4o',
         max_tokens: 1024,
         messages: [
           { role: 'system', content: LATEX_INSTRUCTIONS },
